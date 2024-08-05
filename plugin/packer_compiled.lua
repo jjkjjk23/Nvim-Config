@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/jjkjjk23/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/jjkjjk23/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/jjkjjk23/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -154,6 +159,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jjkjjk23/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/jjkjjk23/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 

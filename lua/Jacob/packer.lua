@@ -6,6 +6,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
+  use 'mfussenegger/nvim-dap'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		-- or                            , branch = '0.1.x',
@@ -43,4 +44,6 @@ return require('packer').startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	}
+  -- packer.nvim
+  use 'lervag/vimtex'
   end)
