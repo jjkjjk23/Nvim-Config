@@ -89,6 +89,12 @@ _G.packer_plugins = {
     path = "/home/jjkjjk23/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["lean.nvim"] = {
+    config = { "\27LJ\2\2C\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\rmappings\2\nsetup\tlean\frequire\0" },
+    loaded = true,
+    path = "/home/jjkjjk23/.local/share/nvim/site/pack/packer/start/lean.nvim",
+    url = "https://github.com/Julian/lean.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/jjkjjk23/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -168,6 +174,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: lean.nvim
+time([[Config for lean.nvim]], true)
+try_loadstring("\27LJ\2\2C\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\rmappings\2\nsetup\tlean\frequire\0", "config", "lean.nvim")
+time([[Config for lean.nvim]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\0029\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")

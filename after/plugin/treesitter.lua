@@ -8,6 +8,22 @@ require'nvim-treesitter.configs'.setup {
   -- Automatically install missing parsers when entering buffer
   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
   auto_install = true,
+  config = function(plug, config)
+    local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+    parser_config.blade = {
+      install_info = {
+        url = "https://github.com/EmranMR/tree-sitter-blade",
+        files = {"src/parser.c"},
+        branch = "main",
+      },
+      filetype = "blade"
+    }
+    vim.filetype.add({
+      pattern = {
+        [".*%.blade%.php"] = "blade",
+      },
+    })
+  end,
 
 
   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)

@@ -18,6 +18,8 @@ return require('packer').startup(function(use)
 		vim.cmd('colorscheme rose-pine')
 
 	end})
+
+
 	use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use( 'nvim-treesitter/playground')
 	use( 'theprimeagen/harpoon')
@@ -46,4 +48,18 @@ return require('packer').startup(function(use)
 	}
   -- packer.nvim
   use 'lervag/vimtex'
+  -- For packer.nvim
+  use {
+    'Julian/lean.nvim',
+    -- event = 'BufReadPre *.lean', -- Packer uses a single string for events
+    requires = {
+      'neovim/nvim-lspconfig',
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+			'hrsh7th/nvim-cmp',
+    },
+    config = function()
+      require('lean').setup({ mappings = true })
+    end
+  }
   end)

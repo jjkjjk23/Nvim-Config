@@ -18,7 +18,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'cmake', 'rust_analyzer'},
+  ensure_installed = {'cmake'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
